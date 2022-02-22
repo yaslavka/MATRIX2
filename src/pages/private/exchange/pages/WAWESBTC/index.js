@@ -13,7 +13,7 @@ const Wawes = () => {
   return (
     <Container className="root-page">
       <Row>
-        <Col className="d-none d-xl-block col-xl-38">
+        <Col xl={3} className="d-none d-xl-block col-xl-38">
           <NavBar />
         </Col>
         <Col xl={9}>

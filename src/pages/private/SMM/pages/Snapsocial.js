@@ -3,23 +3,6 @@ import { Col, Container, Row } from 'reactstrap'
 import NavBar from '../../../../components/layout/Navbar'
 import { Link } from 'react-router-dom'
 import routes from '../../../../constants/routes.constants'
-import { getAccessToken } from '../../../../utils'
-import Raven from 'raven-js'
-import { baseInstance } from '../../../../api'
-baseInstance.interceptors.request.use(
-  (config) => {
-    const token = getAccessToken()
-    if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`
-    }
-    return config
-  },
-  (error) => {
-    Raven.captureException(error)
-    return Promise.reject(error)
-  },
-)
-
 function Snapsocial() {
   return (
     <Container className="root-page">
@@ -85,7 +68,7 @@ function Snapsocial() {
                   <div style={{ display: 'inline-block', right: '15px' }}>
                     <img src="../img/vk.png" />
                   </div>
-                  <div style={{ display: 'inline-block', width: '200px', text: 'center' }}>
+                  <div style={{ display: 'inline-block', width: '150px' }} className="xxx">
                     <div
                       id="uLogin_1"
                       data-ulogin="display=buttons;optional=first_name,last_name,photo;providers=vkontakte;redirect_uri=http%3A%2F%2Fsmm%2Fsnapsocial"

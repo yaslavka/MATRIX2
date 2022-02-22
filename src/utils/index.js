@@ -122,8 +122,8 @@ export const resizeFreeInformationImage = (file) =>
   new Promise((resolve) => {
     Resizer.imageFileResizer(
       file,
-      250,
-      250,
+      1366,
+      768,
       'JPEG',
       100,
       0,

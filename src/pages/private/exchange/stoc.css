@@ -5774,11 +5774,11 @@ table.marketes tbody tr td.dataTables_empty { padding:0 5px 0 19px; }
   border-bottom-color: #f6f7f8;
 }
 
-.market_base_container a:nth-child(1) { width: 10%; }
-.market_base_container a:nth-child(2) { width: 10%; }
-.market_base_container a:nth-child(3) { width: 10%; }
-.market_base_container a:nth-child(4) { width: 10%; }
-.market_base_container a:nth-child(5) { width: 10%; }
+.market_base_container a:nth-child(1) { width: 15%; }
+.market_base_container a:nth-child(2) { width: 15%; }
+.market_base_container a:nth-child(3) { width: 15%; }
+.market_base_container a:nth-child(4) { width: 15%; }
+.market_base_container a:nth-child(5) { width: 15%; }
 .market_base_container a:nth-child(6) { width: 8%; }
 .market_base_container a:hover{
   background-color:#e7f0f9;
