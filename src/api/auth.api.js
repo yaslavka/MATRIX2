@@ -10,7 +10,7 @@ export const signUp = (userInfo) =>
 
 export const signIn = (credentials) =>
   baseInstance({
-    url: 'oauth/v2/token',
+    url: 'auth/token',
     method: 'post',
     data: createFormDataObj({ ...credentials, grant_type: 'password' }),
   })
