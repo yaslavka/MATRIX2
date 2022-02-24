@@ -48,12 +48,12 @@ export const api = {
   },
   signIn(credentials) {
     return baseInstance.post(
-      'oauth/v2/token',
+      'auth/token',
       createFormDataObj({ ...credentials, grant_type: 'password' }),
     )
   },
   signUp(userInfo) {
-    return baseInstance.post('registration', userInfo)
+    return baseInstance.post('user/registration', userInfo)
   },
   resetPassword(email) {
     return baseInstance.post('registration/restore-password', { email })

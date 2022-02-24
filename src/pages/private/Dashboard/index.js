@@ -35,7 +35,7 @@ function Dashboard() {
   useEffect(() => {
     async function fetchImage() {
       if (userInfo?.avatar) {
-        const load = await fetch(`${process.env.REACT_APP_BASE_URL}${userInfo.avatar}`)
+        const load = await fetch(`${process.env.REACT_APP_BASE_URL}/${userInfo.avatar}`)
         const blob = await load.blob()
         const resizeImage = await resizeFreeInformationImage(blob)
         setFreeInfoAvatar(resizeImage)
