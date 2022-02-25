@@ -70,6 +70,7 @@
     "lodash": "^4.17.21",
     "lodash.shuffle": "^4.2.0",
     "moment": "^2.29.1",
+    "node": "^17.4.0",
     "perfect-scrollbar": "^1.5.5",
     "pixi-assetslist-loader": "^1.0.0",
     "pixi-particles": "^4.2.0",

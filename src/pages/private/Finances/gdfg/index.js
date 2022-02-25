@@ -7,7 +7,7 @@ import * as actions from '../../../actions/finance.actions'
 import OperationsHistoryModal from './OperationsHistoryModal'
 import MoneyTransferModal from './MoneyTransferModal'
 import NavBar from '../../../components/layout/Navbar'
-import UserInfo from '../../../components/UserInfo'
+//import UserInfo from '../../../components/UserInfo'
 
 import WithdrawalOfMoney from './WithdrawalOfMoney'
 import ReplenishmentOfMoney from './ReplenishmentOfMoney'
@@ -36,7 +36,6 @@ function Finances() {
       <Container className="root-page">
         <Row>
           <Col xl={3} className="d-none d-xl-block">
-            <UserInfo />
             <NavBar />
           </Col>
           <Col>
@@ -55,7 +54,7 @@ function Finances() {
                         <h3>
                           {formatter
                             .format((userInfo.balance > -1 && userInfo.balance) || 0)
-                            .replace('₽', 'ST')}
+                            .replace('₽', 'RUB')}
                         </h3>
                         <br />
                         <Button onClick={handleVisibleTransferMoneyModal} color="primary" block>
@@ -68,7 +67,7 @@ function Finances() {
                     <div className="card">
                       <div className="card__header">
                         <div className="card__header-left">
-                          <h3 className="card__title">Транзитный баланс</h3>
+                          <h3 className="card__title">Внутренний Счет</h3>
                         </div>
                       </div>
                       <div className="card__body">
@@ -77,7 +76,7 @@ function Finances() {
                             .format(
                               (userInfo.transferBalance > -1 && userInfo.transferBalance) || 0,
                             )
-                            .replace('₽', 'ST')}
+                            .replace('₽', 'RUB')}
                         </h3>
 
                         <br />
