@@ -1,9 +1,9 @@
 import { Col, Container, Row } from 'reactstrap'
 import NavBar from '../../../../../components/layout/Navbar'
-import Spi from '../cost/Components/Header'
 import React from 'react'
 import 'font-awesome/css/font-awesome.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Spin from '../Header'
 
 function Costs() {
   return (
@@ -13,7 +13,7 @@ function Costs() {
           <NavBar />
         </Col>
         <Col xl={8}>
-          <Spi />
+          <Spin />
           <iframe src="http://admiral/lobby/game/gnom/" width="100%" height="44%"></iframe>
         </Col>
       </Row>

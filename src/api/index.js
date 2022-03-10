@@ -48,29 +48,29 @@ export const api = {
   },
   signIn(credentials) {
     return baseInstance.post(
-      'auth/token',
+      '/auth/token',
       createFormDataObj({ ...credentials, grant_type: 'password' }),
     )
   },
   signUp(userInfo) {
-    return baseInstance.post('user/registration', userInfo)
+    return baseInstance.post('/user/registration', userInfo)
   },
   resetPassword(email) {
     return baseInstance.post('registration/restore-password', { email })
   },
   // User
   getUserInfo() {
-    return baseInstance.get('user')
+    return baseInstance.get('/user')
   },
   updateAvatar(avatar) {
-    return baseInstance.post('user/avatar', createFormDataObj({ avatar }))
+    return baseInstance.post('/user/avatar', createFormDataObj({ avatar }))
   },
   searchUserByLogin({ user_name, matrix_type }) {
-    return baseInstance.get(`user/find?user_name=${user_name}&matrix_type=${matrix_type}`)
+    return baseInstance.get(`/user/find?user_name=${user_name}&matrix_type=${matrix_type}`)
   },
   // Matrices
   getMatrixTypes() {
-    return baseInstance.get('matrix/type')
+    return baseInstance.get('/matrix/type')
   },
   getMatrixCloneStatTypes() {
     return baseInstance.get('matrix/clone-stat')

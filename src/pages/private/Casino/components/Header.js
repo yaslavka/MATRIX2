@@ -9,7 +9,7 @@ import CasinoIcon from '@material-ui/icons/Casino'
 import Container from '@material-ui/core/Container'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import NumberFormat from 'react-number-format'
-import { store } from './dice/context'
+import configureStore, { history } from '../../../../config/store'
 import { Link } from 'react-router-dom'
 import routes from '../../../../constants/routes.constants'
 import styles from '../../Star/Table/Table.module.scss'
@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Spin(props) {
   const classes = useStyles()
-  const datos = useContext(store)
+  const datos = configureStore(history)
   const [openModalLogin, setOpenModalLogin] = React.useState(false)
 
   const handleLogin = () => {

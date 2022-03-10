@@ -12,7 +12,6 @@
   },
   "license": "MIT",
   "author": "The CoreUI Team (https://github.com/orgs/coreui/people)",
-  "proxy": "http://smm",
   "scripts": {
     "build": "react-scripts build",
     "build:n17": "react-scripts --openssl-legacy-provider build",
@@ -113,6 +112,7 @@
     "react-select": "^5.2.2",
     "react-select-search": "^3.0.9",
     "react-slick": "^0.28.1",
+    "react-swf": "^1.0.7",
     "react-testing-library": "^8.0.1",
     "react-text-truncate": "^0.17.0",
     "react-wow": "^1.0.0",

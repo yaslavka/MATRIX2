@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Container, Row } from 'reactstrap'
 import NavBar from '../../../../../components/layout/Navbar'
-import Spio from '../../../../../components/Header'
+import Spin from '../Header'
 
 function ETRace() {
   return (
@@ -11,7 +11,7 @@ function ETRace() {
           <NavBar />
         </Col>
         <Col xl={9}>
-          <Spio />
+          <Spin />
           <iframe
             src="https://demo.evoplay.games/demo/instant/html5/evoplay/etraces"
             width="100%"

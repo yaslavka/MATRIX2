@@ -1,8 +1,6 @@
 import { Col, Container, Row } from 'reactstrap'
 import NavBar from '../../../../../components/layout/Navbar'
 import React from 'react'
-import Spio from '../../../../../components/Header'
-import Appzx from './App'
 import Spin from '../Header'
 
 function Blacc() {

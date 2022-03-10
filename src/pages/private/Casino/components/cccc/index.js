@@ -1,7 +1,6 @@
 import { Col, Container, Row } from 'reactstrap'
 import NavBar from '../../../../../components/layout/Navbar'
 import React from 'react'
-import './index.css'
 import Spin from '../Header'
 function Blaccd() {
   return (

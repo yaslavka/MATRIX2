@@ -69,7 +69,7 @@ function Tables() {
                   return (
                     <TablesElement
                       key={i.toString()}
-                      urlPrefix="MATRIX-table"
+                      urlPrefix="personal-table"
                       transform={transform}
                       matrix={matrix}
                     />

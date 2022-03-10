@@ -30,9 +30,9 @@ const TableQueue = ({ location: { state = {} } }) => {
     (route = '') => {
       let newRoute = '/'
       if (matrixInfo && matrixInfo.id) {
-        newRoute = `/MATRIX-table/${matrixInfo.id}${route}`
+        newRoute = `/personal-table/${matrixInfo.id}${route}`
       } else if (type) {
-        newRoute = `/MATRIX/${type}${route}`
+        newRoute = `/table/${type}${route}`
       }
       return newRoute
     },
@@ -142,7 +142,7 @@ const TableQueue = ({ location: { state = {} } }) => {
                   <Col key={user.id} lg={4}>
                     <Link
                       to={{
-                        pathname: `/MATRIX/${user.id}`,
+                        pathname: `/table/${user.id}`,
                         state: {
                           query: { line, offset, name },
                           meta: { page },

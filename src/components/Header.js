@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -11,7 +11,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import NumberFormat from 'react-number-format'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { store } from '../pages/private/Casino/components/dice/context'
+import configureStore, { history } from '../config/store'
 import * as actions from '../actions/finance.actions'
 import { formatter } from '../utils'
 import styles from '../pages/private/Star/Table/Table.module.scss'
@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Spio(props) {
   const classes = useStyles()
-  const datos = useContext(store)
+  const datos = configureStore(history)
   const [openModalLogin, setOpenModalLogin] = React.useState(false)
 
   const handleLogin = () => {
@@ -50,11 +50,6 @@ function Spio(props) {
   const handleLoginClose = () => {
     setOpenModalLogin(false)
   }
-
-  const handleLogout = () => {
-    datos.updateAuth({ isLogged: false, username: '' })
-  }
-
   const handleLogoClick = () => {
     datos.restoreData({
       isLogged: false,
@@ -118,7 +113,7 @@ function Spio(props) {
               {datos.state && datos.state.isLogged ? (
                 <>
                   <Typography variant="h6">{datos.state.username}</Typography>
-                  <IconButton onClick={handleLogout} color="inherit">
+                  <IconButton color="inherit">
                     <ExitToAppIcon />
                   </IconButton>
                 </>
